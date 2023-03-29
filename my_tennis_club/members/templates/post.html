@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8">
+      <title>DB</title>
+      {% load bootstrap5 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+  </head>
+
+  <body>
+
+      <a href="/post/search">Fai una ricerca</a>
+
+      <br /><br />
+
+      <table border="1">
+        <tr>
+          <th>Titolo</th>
+          <th>Autore</th>
+          <th>Contenuto</th>
+          <th>Tag</th>
+          <th>Data</th>
+        </tr>
+
+        {% for x in myBlog %}
+         <tr>
+           <td>{{ x.title }}</td>
+           <td>{{ x.author }}</td>
+           <td>{{ x.context }}</td>
+           <td><a href="tag/{{ x.tag }}">{{ x.tag }}</a></td>
+           <td>{{ x.date }}</td>
+           <td><a href="delete/{{ x.id }}">Cancella</a></td>
+         </tr>
+        {% endfor %}
+      </table>
+
+      <br />
+
+      <a href="/">Torna indietro</a>
+  </body>
+</html>

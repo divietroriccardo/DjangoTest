@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8">
+      <title>Risultati Ricerca</title>
+      {% load bootstrap5 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+  </head>
+
+  <body>
+    <div class="container">
+      <table border="1">
+        <tr>
+          <th>Titolo</th>
+          <th>Autore</th>
+          <th>Contenuto</th>
+          <th>Tag</th>
+          <th>Data</th>
+        </tr>
+
+        {% for x in myRes %}
+         <tr>
+           <td>{{ x.title }}</td>
+           <td>{{ x.author }}</td>
+           <td>{{ x.context }}</td>
+           <td>{{ x.tag }}</td>
+           <td>{{ x.date }}</td>
+           <td><a href="delete/{{ x.id }}">Cancella</a></td>
+         </tr>
+        {% endfor %}
+      </table>
+    </div>
+      <br />
+
+      <a href="/post">Torna indietro</a>
+  </body>
+</html>

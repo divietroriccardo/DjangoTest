@@ -1,0 +1,1 @@
+alert("Lo script JS ha funzionato")

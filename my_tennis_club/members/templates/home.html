@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8">
+      <title>Title</title>
+  </head>
+
+  <body>
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Cognome</th>
+        </tr>
+
+        {% for x in myMembers %}
+         <tr>
+           <td>{{ x.id }}</td>
+           <td>{{ x.first_name }}</td>
+           <td>{{ x.last_name }}</td>
+         </tr>
+        {% endfor %}
+      </table>
+  </body>
+</html>

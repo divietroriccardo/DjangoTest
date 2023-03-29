@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8">
+      <title>Cerca</title>
+      {% load bootstrap5 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+  </head>
+
+  <body>
+      <form action = "results/" method = "POST">
+        {% csrf_token %}
+        {% bootstrap_label "Autore" label_for="name" %}
+        <input id="name" type="text" name="name">
+
+        {% bootstrap_label "Tag" label_for="name" %}
+        <input id="tag" type="text" name="tag">
+
+        {% buttons %}
+            <button type="sumbit" class="btn btn-primary">Cerca</button>
+        {% endbuttons %}
+      </form>
+  </body>
+</html>

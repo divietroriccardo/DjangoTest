@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+      <meta charset="UTF-8">
+      <title>Inserisci</title>
+      {% load bootstrap5 %}
+      {% bootstrap_css %}
+      {% bootstrap_javascript %}
+  </head>
+
+  <body>
+    <form method="POST" action="">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+
+      {% buttons %}
+        <button type="sumbit" class="btn btn-primary">Invia</button>
+      {% endbuttons %}
+    </form>
+
+    <br />
+
+    <a href="/post">Visualizza il DataBase</a>
+  </body>
+</html>

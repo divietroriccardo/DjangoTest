@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Modulo</title>
+    </head>
+    <body>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="sumbit">Invia</button>
+        </form>
+    </body>
+</html>
